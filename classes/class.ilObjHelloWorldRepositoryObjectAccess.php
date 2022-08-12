@@ -26,7 +26,7 @@ class ilObjHelloWorldRepositoryObjectAccess extends ilObjectPluginAccess impleme
 	 * @param       string $a_permission permission
 	 * @param       int $a_ref_id reference id
 	 * @param       int $a_obj_id object id
-	 * @param 		int$a_user_id user id (default is current user)
+	 * @param 		int $a_user_id user id (default is current user)
 	 * @return bool true, if everything is ok
 	 */
 	function _checkAccess($a_cmd, $a_permission, $a_ref_id, $a_obj_id, $a_user_id = 0)
@@ -60,7 +60,7 @@ class ilObjHelloWorldRepositoryObjectAccess extends ilObjectPluginAccess impleme
 	{
 		global $ilDB;
 
-		$set = $ilDB->query("SELECT is_online FROM rep_robj_xheworepo_data ".
+		$set = $ilDB->query("SELECT is_online FROM xheworepo_data ".
 			" WHERE id = ".$ilDB->quote($a_id, "integer")
 		);
 		$rec  = $ilDB->fetchAssoc($set);
@@ -80,14 +80,15 @@ class ilObjHelloWorldRepositoryObjectAccess extends ilObjectPluginAccess impleme
 
 	/**
 	 * check condition for a specific user and object
-	 * @param type $a_trigger_obj_id
-	 * @param type $a_operator
-	 * @param type $a_value
-	 * @param type $a_usr_id
+	 * @param integer $a_trigger_obj_id
+	 * @param integer $a_operator
+	 * @param integer $a_value
+	 * @param integer $a_usr_id
 	 * @return bool
 	 */
 	public static function checkCondition($a_trigger_obj_id, $a_operator, $a_value, $a_usr_id) {
-		$ref_id = array_shift(ilObject::_getAllReferences($a_trigger_obj_id));
+        $ilObjectReferences = ilObject::_getAllReferences($a_trigger_obj_id);
+        $ref_id = array_shift($ilObjectReferences);
 		$object = new ilObjHelloWorldRepositoryObject($ref_id);
 		switch ($a_operator) {
 			case ilConditionHandler::OPERATOR_PASSED:

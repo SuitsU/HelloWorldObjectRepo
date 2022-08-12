@@ -1,20 +1,20 @@
-obj_xheworepo#:#Hello World Repository Object
-objs_xheworepo#:#Hello World Repository Objects
+obj_xheworepo#:#Repository Object
+objs_xheworepo#:#Repository Objects
 obj_xheworepo_duplicate#:#Copy
-objs_xheworepo_duplicate#:#Copy Hello World Repository Objects
-obj_xheworepo_select#:#Select Hello World Repository Object
-xheworepo_add#:#Add Hello World Repository Object
-xheworepo_new#:#Add New Hello World Repository Object
-xheworepo_read#:#Read access to Hello World Repository Object
-xheworepo_write#:#Edit Hello World Repository Object
-xheworepo_delete#:#Delete Hello World Repository Object
-xheworepo_visible#:#Hello World Repository Object is visible
+objs_xheworepo_duplicate#:#Copy Repository Objects
+obj_xheworepo_select#:#Select Repository Object
+xheworepo_add#:#Add Repository Object
+xheworepo_new#:#Add New Repository Object
+xheworepo_read#:#Read access to Repository Object
+xheworepo_write#:#Edit Repository Object
+xheworepo_delete#:#Delete Repository Object
+xheworepo_visible#:#Repository Object is visible
 xheworepo_edit_permission#:#Change permission settings
-crs_create_xheworepo#:#Create Hello World Repository Object
-grp_create_xheworepo#:#Create Hello World Repository Object
-fold_create_xheworepo#:#Create Hello World Repository Object
-root_create_xheworepo#:#Create Hello World Repository Object
-cat_create_xheworepo#:#Create Hello World Repository Object 1
+crs_create_xheworepo#:#Create Repository Object
+grp_create_xheworepo#:#Create Repository Object
+fold_create_xheworepo#:#Create Repository Object
+root_create_xheworepo#:#Create Repository Object
+cat_create_xheworepo#:#Create Repository Object 1
 title#:#Title
 description#:#Description
 online#:#Online
@@ -43,6 +43,6 @@ lp_status#:#Learning Progress
 update_successful#:#Update Successful
 news_title#:#Title (en)
 news_content#:#Content (en)
-xheworepo_copy#:#Copy Hello World Repository Object
+xheworepo_copy#:#Copy Repository Object
 offline#:#Offline
 status#:#Status
