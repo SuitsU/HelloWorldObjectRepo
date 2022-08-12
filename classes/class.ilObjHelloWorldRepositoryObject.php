@@ -34,7 +34,7 @@ class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStat
 	{
 		global $ilDB;
 
-		$ilDB->manipulate("INSERT INTO rep_robj_xtst_data ".
+		$ilDB->manipulate("INSERT INTO rep_robj_xheworepo_data ".
 			"(id, is_online, option_one, option_two) VALUES (".
 			$ilDB->quote($this->getId(), "integer").",".
 			$ilDB->quote(0, "integer").",".
@@ -50,7 +50,7 @@ class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStat
 	{
 		global $ilDB;
 
-		$set = $ilDB->query("SELECT * FROM rep_robj_xtst_data ".
+		$set = $ilDB->query("SELECT * FROM rep_robj_xheworepo_data ".
 			" WHERE id = ".$ilDB->quote($this->getId(), "integer")
 		);
 		while ($rec = $ilDB->fetchAssoc($set))
@@ -66,7 +66,7 @@ class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStat
 	{
 		global $ilDB;
 
-		$ilDB->manipulate($up = "UPDATE rep_robj_xtst_data SET ".
+		$ilDB->manipulate($up = "UPDATE rep_robj_xheworepo_data SET ".
 			" is_online = ".$ilDB->quote($this->isOnline(), "integer")."".
 			" WHERE id = ".$ilDB->quote($this->getId(), "integer")
 		);
@@ -79,7 +79,7 @@ class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStat
 	{
 		global $ilDB;
 
-		$ilDB->manipulate("DELETE FROM rep_robj_xtst_data WHERE ".
+		$ilDB->manipulate("DELETE FROM rep_robj_xheworepo_data WHERE ".
 			" id = ".$ilDB->quote($this->getId(), "integer")
 		);
 	}

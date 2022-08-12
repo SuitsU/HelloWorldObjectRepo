@@ -17,7 +17,7 @@ require_once("./Services/Form/classes/class.ilNonEditableValueGUI.php");
  */
 class ilObjHelloWorldRepositoryObjectGUI extends ilObjectPluginGUI
 {
-	const LP_SESSION_ID = 'xtst_lp_session_state';
+	const LP_SESSION_ID = 'xheworepo_lp_session_state';
 
 	/** @var  ilCtrl */
 	protected $ctrl;
@@ -135,7 +135,7 @@ class ilObjHelloWorldRepositoryObjectGUI extends ilObjectPluginGUI
 	 */
 	protected function initPropertiesForm() {
 		$form = new ilPropertyFormGUI();
-		$form->setTitle($this->plugin->txt("obj_xtst"));
+		$form->setTitle($this->plugin->txt("obj_xheworepo"));
 
 		$title = new ilTextInputGUI($this->plugin->txt("title"), "title");
 		$title->setRequired(true);

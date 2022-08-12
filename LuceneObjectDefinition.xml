@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<ObjectDefinition xmlns:xi="http://www.w3.org/2001/XInclude" type="heworepo">
+<ObjectDefinition xmlns:xi="http://www.w3.org/2001/XInclude" type="xheworepo">
 	<Document type="default">
 		<xi:include href="../../../../../../../Services/Object/LuceneDataSource.xml" />
 		<DataSource type="JDBC" action="append">
 			<Query>
-				SELECT 'Repoplugin' AS heworepostring FROM object_data
+				SELECT 'Repoplugin' AS xheworepostring FROM object_data
 				WHERE obj_id IN (?)
 			</Query>
 			<Param format="list" type="int" value="objId" />
-			<Field store="YES" index="ANALYZED" column="heworepostring" type="text" name="propertyMedium" />
+			<Field store="YES" index="ANALYZED" column="xheworepostring" type="text" name="propertyMedium" />
 		</DataSource>
 	</Document>
 </ObjectDefinition>

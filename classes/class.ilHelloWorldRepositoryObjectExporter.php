@@ -24,11 +24,11 @@ class ilHelloWorldRepositoryObjectExporter extends ilXmlExporter {
 
 		include_once "./Services/Xml/classes/class.ilXmlWriter.php";
 		$writer = new ilXmlWriter();
-		$writer->xmlStartTag("heworepo");
+		$writer->xmlStartTag("xheworepo");
 		$writer->xmlElement("title", null, $entity->getTitle());
 		$writer->xmlElement("description", null, $entity->getDescription());
 		$writer->xmlElement("online", null, $entity->isOnline());
-		$writer->xmlEndTag("heworepo");
+		$writer->xmlEndTag("xheworepo");
 
 		return $writer->xmlDumpMem(false);
 	}

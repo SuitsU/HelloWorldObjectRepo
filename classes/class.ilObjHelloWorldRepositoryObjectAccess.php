@@ -60,7 +60,7 @@ class ilObjHelloWorldRepositoryObjectAccess extends ilObjectPluginAccess impleme
 	{
 		global $ilDB;
 
-		$set = $ilDB->query("SELECT is_online FROM rep_robj_xtst_data ".
+		$set = $ilDB->query("SELECT is_online FROM rep_robj_xheworepo_data ".
 			" WHERE id = ".$ilDB->quote($a_id, "integer")
 		);
 		$rec  = $ilDB->fetchAssoc($set);

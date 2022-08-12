@@ -29,7 +29,7 @@ class ilHelloWorldRepositoryObjectImporter extends ilXmlImporter {
 		$entity->setImportId($a_id);
 		$entity->create();
 		$new_id = $entity->getId();
-		$a_mapping->addMapping("Plugins/TestObjectRepository", "heworepo", $a_id, $new_id);
+		$a_mapping->addMapping("Plugins/TestObjectRepository", "xheworepo", $a_id, $new_id);
 		return $new_id;
 	}
 }

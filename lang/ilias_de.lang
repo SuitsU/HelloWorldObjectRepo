@@ -1,20 +1,20 @@
-obj_xtst#:#Hello World Repository Object
-objs_xtst#:#Hello World Repository Objects
-obj_xtst_duplicate#:#Kopieren
-objs_xtst_duplicate#:#Kopiere Hello World Repository Objects
-obj_xtst_select#:#Wähle Hello World Repository Object
-xtst_add#:#Hello World Repository Object hinzufügen
-xtst_new#:#Neues Hello World Repository Object
-xtst_read#:#Lesezugriff auf Hello World Repository Object
-xtst_write#:#Hello World Repository Object bearbeiten
-xtst_delete#:#Hello World Repository Object löschen
-xtst_visible#:#Hello World Repository Object ist sichtbar
-xtst_edit_permission#:#Zugriffsrecht bearbeiten
-crs_create_xtst#:#Erstelle Hello World Repository Object
-grp_create_xtst#:#Erstelle Hello World Repository Object
-fold_create_xtst#:#Erstelle Hello World Repository Object
-root_create_xtst#:#Erstelle Hello World Repository Object
-cat_create_xtst#:#Erstelle Hello World Repository Object
+obj_xheworepo#:#Hello World Repository Object
+objs_xheworepo#:#Hello World Repository Objects
+obj_xheworepo_duplicate#:#Kopieren
+objs_xheworepo_duplicate#:#Kopiere Hello World Repository Objects
+obj_xheworepo_select#:#Wähle Hello World Repository Object
+xheworepo_add#:#Hello World Repository Object hinzufügen
+xheworepo_new#:#Neues Hello World Repository Object
+xheworepo_read#:#Lesezugriff auf Hello World Repository Object
+xheworepo_write#:#Hello World Repository Object bearbeiten
+xheworepo_delete#:#Hello World Repository Object löschen
+xheworepo_visible#:#Hello World Repository Object ist sichtbar
+xheworepo_edit_permission#:#Zugriffsrecht bearbeiten
+crs_create_xheworepo#:#Erstelle Hello World Repository Object
+grp_create_xheworepo#:#Erstelle Hello World Repository Object
+fold_create_xheworepo#:#Erstelle Hello World Repository Object
+root_create_xheworepo#:#Erstelle Hello World Repository Object
+cat_create_xheworepo#:#Erstelle Hello World Repository Object
 title#:#Titel
 description#:#Beschreibung
 online#:#Online
@@ -43,6 +43,6 @@ lp_status#:#Lernfortschritt
 update_successful#:Die Änderungen wurden gespeichert.
 news_title#:#Titel (en)
 news_content#:#Inhalt (en)
-xtst_copy#:#Hello World Repository Object kopieren
+xheworepo_copy#:#Hello World Repository Object kopieren
 offline#:#Offline
 status#:#Status
