@@ -7,15 +7,15 @@ require_once("./Services/Form/classes/class.ilCheckboxInputGUI.php");
 require_once("./Services/Tracking/classes/class.ilLearningProgress.php");
 require_once("./Services/Tracking/classes/class.ilLPStatusWrapper.php");
 require_once("./Services/Tracking/classes/status/class.ilLPStatusPlugin.php");
-require_once("./Customizing/global/plugins/Services/Repository/RepositoryObject/TestRepositoryObject/classes/class.ilTestRepositoryObjectPlugin.php");
+require_once("./Customizing/global/plugins/Services/Repository/RepositoryObject/HelloWorldRepositoryObject/classes/class.ilHelloWorldRepositoryObjectPlugin.php");
 require_once("./Services/Form/classes/class.ilPropertyFormGUI.php");
 require_once("./Services/Form/classes/class.ilNonEditableValueGUI.php");
 
 /**
- * @ilCtrl_isCalledBy ilObjTestRepositoryObjectGUI: ilRepositoryGUI, ilAdministrationGUI, ilObjPluginDispatchGUI
- * @ilCtrl_Calls ilObjTestRepositoryObjectGUI: ilPermissionGUI, ilInfoScreenGUI, ilObjectCopyGUI, ilCommonActionDispatcherGUI, ilExportGUI
+ * @ilCtrl_isCalledBy ilObjHelloWorldRepositoryObjectGUI: ilRepositoryGUI, ilAdministrationGUI, ilObjPluginDispatchGUI
+ * @ilCtrl_Calls ilObjHelloWorldRepositoryObjectGUI: ilPermissionGUI, ilInfoScreenGUI, ilObjectCopyGUI, ilCommonActionDispatcherGUI, ilExportGUI
  */
-class ilObjTestRepositoryObjectGUI extends ilObjectPluginGUI
+class ilObjHelloWorldRepositoryObjectGUI extends ilObjectPluginGUI
 {
 	const LP_SESSION_ID = 'xtst_lp_session_state';
 
@@ -44,7 +44,7 @@ class ilObjTestRepositoryObjectGUI extends ilObjectPluginGUI
 	 */
 	final function getType()
 	{
-		return ilTestRepositoryObjectPlugin::ID;
+		return ilHelloWorldRepositoryObjectPlugin::ID;
 	}
 
 	/**
@@ -192,7 +192,7 @@ class ilObjTestRepositoryObjectGUI extends ilObjectPluginGUI
 
 		$this->tabs->activateTab("content");
 
-		/** @var ilObjTestRepositoryObject $object */
+		/** @var ilObjHelloWorldRepositoryObject $object */
 		$object = $this->object;
 
 		$form = new ilPropertyFormGUI();
@@ -241,7 +241,7 @@ class ilObjTestRepositoryObjectGUI extends ilObjectPluginGUI
 	}
 
 	/**
-	 * @param $object ilObjTestRepositoryObject
+	 * @param $object ilObjHelloWorldRepositoryObject
 	 * @param $form ilPropertyFormGUI
 	 */
 	private function fillObject($object, $form) {

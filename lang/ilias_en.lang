@@ -1,20 +1,20 @@
-obj_xtst#:#Test Repository Object
-objs_xtst#:#Test Repository Objects
+obj_xtst#:#Hello World Repository Object
+objs_xtst#:#Hello World Repository Objects
 obj_xtst_duplicate#:#Copy
-objs_xtst_duplicate#:#Copy Test Repository Objects
-obj_xtst_select#:#Select Test Repository Object
-xtst_add#:#Add Test Repository Object
-xtst_new#:#Add New Test Repository Object
-xtst_read#:#Read access to Test Repository Object
-xtst_write#:#Edit Test Repository Object
-xtst_delete#:#Delete Test Repository Object
-xtst_visible#:#Test Repository Object is visible
+objs_xtst_duplicate#:#Copy Hello World Repository Objects
+obj_xtst_select#:#Select Hello World Repository Object
+xtst_add#:#Add Hello World Repository Object
+xtst_new#:#Add New Hello World Repository Object
+xtst_read#:#Read access to Hello World Repository Object
+xtst_write#:#Edit Hello World Repository Object
+xtst_delete#:#Delete Hello World Repository Object
+xtst_visible#:#Hello World Repository Object is visible
 xtst_edit_permission#:#Change permission settings
-crs_create_xtst#:#Create Test Repository Object
-grp_create_xtst#:#Create Test Repository Object
-fold_create_xtst#:#Create Test Repository Object
-root_create_xtst#:#Create Test Repository Object
-cat_create_xtst#:#Create Test Repository Object
+crs_create_xtst#:#Create Hello World Repository Object
+grp_create_xtst#:#Create Hello World Repository Object
+fold_create_xtst#:#Create Hello World Repository Object
+root_create_xtst#:#Create Hello World Repository Object
+cat_create_xtst#:#Create Hello World Repository Object
 title#:#Title
 description#:#Description
 online#:#Online
@@ -43,6 +43,6 @@ lp_status#:#Learning Progress
 update_successful#:#Update Successful
 news_title#:#Title (en)
 news_content#:#Content (en)
-xtst_copy#:#Copy Test Repository Object
+xtst_copy#:#Copy Hello World Repository Object
 offline#:#Offline
 status#:#Status

@@ -2,11 +2,11 @@
 
 include_once("./Services/Repository/classes/class.ilObjectPlugin.php");
 require_once("./Services/Tracking/interfaces/interface.ilLPStatusPlugin.php");
-require_once("./Customizing/global/plugins/Services/Repository/RepositoryObject/TestRepositoryObject/classes/class.ilObjTestRepositoryObjectGUI.php");
+require_once("./Customizing/global/plugins/Services/Repository/RepositoryObject/HelloWorldRepositoryObject/classes/class.ilObjHelloWorldRepositoryObjectGUI.php");
 
 /**
  */
-class ilObjTestRepositoryObject extends ilObjectPlugin implements ilLPStatusPluginInterface
+class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStatusPluginInterface
 {
 	/**
 	 * Constructor
@@ -24,7 +24,7 @@ class ilObjTestRepositoryObject extends ilObjectPlugin implements ilLPStatusPlug
 	 */
 	final function initType()
 	{
-		$this->setType(ilTestRepositoryObjectPlugin::ID);
+		$this->setType(ilHelloWorldRepositoryObjectPlugin::ID);
 	}
 
 	/**
@@ -158,7 +158,7 @@ class ilObjTestRepositoryObject extends ilObjectPlugin implements ilLPStatusPlug
 	public function getLPStatusForUser($a_user_id) {
 		global $ilUser;
 		if($ilUser->getId() == $a_user_id)
-			return $_SESSION[ilObjTestRepositoryObjectGUI::LP_SESSION_ID];
+			return $_SESSION[ilObjHelloWorldRepositoryObjectGUI::LP_SESSION_ID];
 		else
 			return ilLPStatus::LP_STATUS_NOT_ATTEMPTED_NUM;
 	}

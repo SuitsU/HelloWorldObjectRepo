@@ -1,5 +1,10 @@
 <#1>
 <?php
+/**
+ * @var $ilDB
+ */
+?>
+<?php
 $fields = array(
 	'id' => array(
 		'type' => 'integer',
@@ -24,8 +29,8 @@ $fields = array(
 		'notnull' => false
 	)
 );
-if(!$ilDB->tableExists("rep_robj_xtst_data")) {
-	$ilDB->createTable("rep_robj_xtst_data", $fields);
-	$ilDB->addPrimaryKey("rep_robj_xtst_data", array("id"));
+if(!$ilDB->tableExists("rep_robj_heworepo_data")) {
+	$ilDB->createTable("rep_robj_heworepo_data", $fields);
+	$ilDB->addPrimaryKey("rep_robj_heworepo_data", array("id"));
 }
 ?>

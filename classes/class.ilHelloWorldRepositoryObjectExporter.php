@@ -3,11 +3,11 @@
 require_once("./Services/Export/classes/class.ilXmlExporter.php");
 
 /**
- * Class ilTestRepositoryObjectExporter
+ * Class ilHelloWorldRepositoryObjectExporter
  *
  * @author Oskar Truffer <ot@studer-raimann.ch>
  */
-class ilTestRepositoryObjectExporter extends ilXmlExporter {
+class ilHelloWorldRepositoryObjectExporter extends ilXmlExporter {
 
 	/**
 	 * Get xml representation
@@ -20,15 +20,15 @@ class ilTestRepositoryObjectExporter extends ilXmlExporter {
 	public function getXmlRepresentation($a_entity, $a_schema_version, $a_id) {
 		$ref_ids = ilObject::_getAllReferences($a_id);
 		$ref_id = array_shift($ref_ids);
-		$entity = new ilObjTestRepositoryObject($ref_id);
+		$entity = new ilObjHelloWorldRepositoryObject($ref_id);
 
 		include_once "./Services/Xml/classes/class.ilXmlWriter.php";
 		$writer = new ilXmlWriter();
-		$writer->xmlStartTag("xtst");
+		$writer->xmlStartTag("heworepo");
 		$writer->xmlElement("title", null, $entity->getTitle());
 		$writer->xmlElement("description", null, $entity->getDescription());
 		$writer->xmlElement("online", null, $entity->isOnline());
-		$writer->xmlEndTag("xtst");
+		$writer->xmlEndTag("heworepo");
 
 		return $writer->xmlDumpMem(false);
 	}
@@ -56,7 +56,7 @@ class ilTestRepositoryObjectExporter extends ilXmlExporter {
 	public function getValidSchemaVersions($a_entity) {
 		return array (
 	         "5.2.0" => array(
-	             "namespace" => "http://www.ilias.de/Plugins/TestRepositoryObject/md/5_2",
+	             "namespace" => "http://www.ilias.de/Plugins/HelloWorldRepositoryObject/md/5_2",
 	             "xsd_file" => "ilias_md_5_2.xsd",
 	             "min" => "5.2.0",
 	             "max" => "")
