@@ -4,10 +4,10 @@ include_once("./Services/Repository/classes/class.ilObjectPlugin.php");
 require_once("./Services/Tracking/interfaces/interface.ilLPStatusPlugin.php");
 require_once("./Customizing/global/plugins/Services/Repository/RepositoryObject/HelloWorldRepositoryObject/classes/class.ilObjHelloWorldRepositoryObjectGUI.php");
 
-/**
- */
+
 class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStatusPluginInterface
 {
+
 	/**
 	 * Constructor
 	 *
@@ -32,9 +32,12 @@ class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStat
 	 */
 	function doCreate()
 	{
+		/**
+		 * @var $ilDB ilDBInterface
+		 */
 		global $ilDB;
 
-		$ilDB->manipulate("INSERT INTO xheworepo_data ".
+		$ilDB->manipulate("INSERT INTO rep_robj_xhew_data ".
 			"(id, is_online, option_one, option_two) VALUES (".
 			$ilDB->quote($this->getId(), "integer").",".
 			$ilDB->quote(0, "integer").",".
@@ -48,15 +51,34 @@ class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStat
 	 */
 	function doRead()
 	{
+		/**
+		 * @var $ilDB ilDBInterface
+		 */
 		global $ilDB;
 
-		$set = $ilDB->query("SELECT * FROM xheworepo_data ".
+		$set = $ilDB->query("SELECT * FROM rep_robj_xhew_data ".
 			" WHERE id = ".$ilDB->quote($this->getId(), "integer")
 		);
-		while ($rec = $ilDB->fetchAssoc($set))
-		{
-			$this->setOnline($rec["is_online"]);
+
+		/*
+		 * Automatic assignment of vars!
+		 *
+		 */
+
+		$records = $ilDB->fetchAssoc($set);
+		$silent = array('is_', 'has_'); // ...
+
+		foreach ($records as $key => $value) {
+			$key = str_replace($silent,'',$key);
+            $key = str_replace('_',' ',$key);
+			$uc_key = str_replace(' ','',ucwords($key));
+
+			if(method_exists($this, "set{$uc_key}")){
+				$functionName = "set{$uc_key}";
+				$this->$functionName($value);
+			}
 		}
+
 	}
 
 	/**
@@ -64,10 +86,14 @@ class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStat
 	 */
 	function doUpdate()
 	{
+		/**
+		 * @var $ilDB ilDBInterface
+		 */
 		global $ilDB;
 
-		$ilDB->manipulate($up = "UPDATE xheworepo_data SET ".
-			" is_online = ".$ilDB->quote($this->isOnline(), "integer")."".
+		$ilDB->manipulate($up = "UPDATE rep_robj_xhew_data SET ".
+			" is_online = ".$ilDB->quote($this->isOnline(), "integer").",".
+			" `name` = ".$ilDB->quote($this->getName(), "text")."".
 			" WHERE id = ".$ilDB->quote($this->getId(), "integer")
 		);
 	}
@@ -77,9 +103,12 @@ class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStat
 	 */
 	function doDelete()
 	{
+		/**
+		 * @var $ilDB ilDBInterface
+		 */
 		global $ilDB;
 
-		$ilDB->manipulate("DELETE FROM xheworepo_data WHERE ".
+		$ilDB->manipulate("DELETE FROM rep_robj_xhew_data WHERE ".
 			" id = ".$ilDB->quote($this->getId(), "integer")
 		);
 	}
@@ -103,6 +132,16 @@ class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStat
 	}
 
 	/**
+	 * Set online
+	 *
+	 * @param        String                name
+	 */
+	function setName($a_val)
+	{
+		$this->name = $a_val;
+	}
+
+	/**
 	 * Get online
 	 *
 	 * @return        boolean                online
@@ -110,6 +149,16 @@ class ilObjHelloWorldRepositoryObject extends ilObjectPlugin implements ilLPStat
 	function isOnline()
 	{
 		return $this->online;
+	}
+
+	/**
+	 * Get name
+	 *
+	 * @return        String                name
+	 */
+	function getName()
+	{
+		return $this->name;
 	}
 
 	/**

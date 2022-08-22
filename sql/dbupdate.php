@@ -1,7 +1,7 @@
 <#1>
 <?php
 /**
- * @var $ilDB
+ * @var $ilDB ilDBInterface
  */
 ?>
 <?php
@@ -29,8 +29,28 @@ $fields = array(
 		'notnull' => false
 	)
 );
-if(!$ilDB->tableExists("xheworepo_data")) {
-	$ilDB->createTable("xheworepo_data", $fields);
-	$ilDB->addPrimaryKey("xheworepo_data", array("id"));
+if(!$ilDB->tableExists("rep_robj_xhew_data")) {
+	$ilDB->createTable("rep_robj_xhew_data", $fields);
+	$ilDB->addPrimaryKey("rep_robj_xhew_data", array("id"));
+}
+?>
+<#2>
+<?php
+if($ilDB->tableExists("rep_robj_xhew_data")) {
+    $ilDB->addTableColumn("rep_robj_xhew_data", 'name', array(
+        'type' => 'text',
+        'length' => 100,
+        'notnull' => false
+    ));
+}
+?>
+<#3>
+<?php
+if($ilDB->tableExists("rep_robj_xhew_data")) {
+    $ilDB->addTableColumn("rep_robj_xhew_data", 'name', array(
+        'type' => 'text',
+        'length' => 100,
+        'notnull' => false
+    ));
 }
 ?>

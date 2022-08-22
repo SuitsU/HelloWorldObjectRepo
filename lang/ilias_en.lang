@@ -1,20 +1,20 @@
-obj_xheworepo#:#Repository Object
-objs_xheworepo#:#Repository Objects
-obj_xheworepo_duplicate#:#Copy
-objs_xheworepo_duplicate#:#Copy Repository Objects
-obj_xheworepo_select#:#Select Repository Object
-xheworepo_add#:#Add Repository Object
-xheworepo_new#:#Add New Repository Object
-xheworepo_read#:#Read access to Repository Object
-xheworepo_write#:#Edit Repository Object
-xheworepo_delete#:#Delete Repository Object
-xheworepo_visible#:#Repository Object is visible
-xheworepo_edit_permission#:#Change permission settings
-crs_create_xheworepo#:#Create Repository Object
-grp_create_xheworepo#:#Create Repository Object
-fold_create_xheworepo#:#Create Repository Object
-root_create_xheworepo#:#Create Repository Object
-cat_create_xheworepo#:#Create Repository Object 1
+obj_xhew#:#Repository Object
+objs_xhew#:#Repository Objects
+obj_xhew_duplicate#:#Copy
+objs_xhew_duplicate#:#Copy Repository Objects
+obj_xhew_select#:#Select Repository Object
+xhew_add#:#Add Repository Object
+xhew_new#:#Add New Repository Object
+xhew_read#:#Read access to Repository Object
+xhew_write#:#Edit Repository Object
+xhew_delete#:#Delete Repository Object
+xhew_visible#:#Repository Object is visible
+xhew_edit_permission#:#Change permission settings
+crs_create_xhew#:#Create Repository Object
+grp_create_xhew#:#Create Repository Object
+fold_create_xhew#:#Create Repository Object
+root_create_xhew#:#Create Repository Object
+cat_create_xhew#:#Create Repository Object 1
 title#:#Title
 description#:#Description
 online#:#Online
@@ -43,6 +43,6 @@ lp_status#:#Learning Progress
 update_successful#:#Update Successful
 news_title#:#Title (en)
 news_content#:#Content (en)
-xheworepo_copy#:#Copy Repository Object
+xhew_copy#:#Copy Repository Object
 offline#:#Offline
 status#:#Status

@@ -1,22 +1,23 @@
-obj_xheworepo#:#Repository Object
-objs_xheworepo#:#Repository Objects
-obj_xheworepo_duplicate#:#Kopieren
-objs_xheworepo_duplicate#:#Kopiere Repository Objects
-obj_xheworepo_select#:#Wähle Repository Object
-xheworepo_add#:#Repository Object hinzufügen
-xheworepo_new#:#Neues Repository Object
-xheworepo_read#:#Lesezugriff auf Repository Object
-xheworepo_write#:#Repository Object bearbeiten
-xheworepo_delete#:#Repository Object löschen
-xheworepo_visible#:#Repository Object ist sichtbar
-xheworepo_edit_permission#:#Zugriffsrecht bearbeiten
-crs_create_xheworepo#:#Erstelle Repository Object
-grp_create_xheworepo#:#Erstelle Repository Object
-fold_create_xheworepo#:#Erstelle Repository Object
-root_create_xheworepo#:#Erstelle Repository Object
-cat_create_xheworepo#:#Erstelle Repository Object
+obj_xhew#:#Repository Object
+objs_xhew#:#Repository Objects
+obj_xhew_duplicate#:#Kopieren
+objs_xhew_duplicate#:#Kopiere Repository Objects
+obj_xhew_select#:#Wähle Repository Object
+xhew_add#:#Repository Object hinzufügen
+xhew_new#:#Neues Repository Object
+xhew_read#:#Lesezugriff auf Repository Object
+xhew_write#:#Repository Object bearbeiten
+xhew_delete#:#Repository Object löschen
+xhew_visible#:#Repository Object ist sichtbar
+xhew_edit_permission#:#Zugriffsrecht bearbeiten
+crs_create_xhew#:#Erstelle Repository Object
+grp_create_xhew#:#Erstelle Repository Object
+fold_create_xhew#:#Erstelle Repository Object
+root_create_xhew#:#Erstelle Repository Object
+cat_create_xhew#:#Erstelle Repository Object
 title#:#Titel
 description#:#Beschreibung
+name#:#Name
 online#:#Online
 save#:#Speichern
 update#:#Update
@@ -36,13 +37,13 @@ lp_status_2#:#Durchgeführt
 lp_status_3#:#Nicht Bestanden
 lp_status_#:#Kein Status gesetzt.
 lp_status_info#:#Achtung, wenn Sie den Lernfortschritt ändern so wird der Lernfortschritt für diesen Benutzer bearbeitet UND alle anderen Benutzer auf "Nicht Teilgenommen" gesetzt! Mit der Lucenesuche wird dieses Objekt gefunden, wenn man nach dem Titel, der Beschreibung oder dem Begriff "Repoplugin" sucht.
-offline:#:Offline
+offline#:#Offline
 important#:#Wichtig
 online_status#:#Online Status
 lp_status#:#Lernfortschritt
-update_successful#:Die Änderungen wurden gespeichert.
+update_successful#:#Die Änderungen wurden gespeichert.
 news_title#:#Titel (en)
 news_content#:#Inhalt (en)
-xheworepo_copy#:#Repository Object kopieren
+xhew_copy#:#Repository Object kopieren
 offline#:#Offline
 status#:#Status

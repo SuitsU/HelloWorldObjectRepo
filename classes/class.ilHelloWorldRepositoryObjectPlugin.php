@@ -6,7 +6,7 @@ include_once("./Services/Repository/classes/class.ilRepositoryObjectPlugin.php")
  */
 class ilHelloWorldRepositoryObjectPlugin extends ilRepositoryObjectPlugin
 {
-	const ID = "xheworepo";
+	const ID = "xhew";
 
 	// must correspond to the plugin subdirectory
 	function getPluginName()
@@ -27,4 +27,3 @@ class ilHelloWorldRepositoryObjectPlugin extends ilRepositoryObjectPlugin
 	}
 
 }
-?>

@@ -17,7 +17,7 @@ require_once("./Services/Form/classes/class.ilNonEditableValueGUI.php");
  */
 class ilObjHelloWorldRepositoryObjectGUI extends ilObjectPluginGUI
 {
-	const LP_SESSION_ID = 'xheworepo_lp_session_state';
+	const LP_SESSION_ID = 'xhew_lp_session_state';
 
 	/** @var  ilCtrl */
 	protected $ctrl;
@@ -135,7 +135,7 @@ class ilObjHelloWorldRepositoryObjectGUI extends ilObjectPluginGUI
 	 */
 	protected function initPropertiesForm() {
 		$form = new ilPropertyFormGUI();
-		$form->setTitle($this->plugin->txt("obj_xheworepo"));
+		$form->setTitle($this->plugin->txt("obj_xhew"));
 
 		$title = new ilTextInputGUI($this->plugin->txt("title"), "title");
 		$title->setRequired(true);
@@ -143,6 +143,9 @@ class ilObjHelloWorldRepositoryObjectGUI extends ilObjectPluginGUI
 
 		$description = new ilTextInputGUI($this->plugin->txt("description"), "description");
 		$form->addItem($description);
+
+        $name = new ilTextInputGUI($this->plugin->txt("name"), "name");
+        $form->addItem($name);
 
 		$online = new ilCheckboxInputGUI($this->plugin->txt("online"), "online");
 		$form->addItem($online);
@@ -161,6 +164,7 @@ class ilObjHelloWorldRepositoryObjectGUI extends ilObjectPluginGUI
 			"title" => $this->object->getTitle(),
 			"description" => $this->object->getDescription(),
 			"online" => $this->object->isOnline(),
+            'name' => $this->object->getName(),
 		));
 	}
 
@@ -185,7 +189,7 @@ class ilObjHelloWorldRepositoryObjectGUI extends ilObjectPluginGUI
 
 		/** @var ilToolbarGUI $ilToolbar */
 		$ilToolbar->addButton("Add News", $ilCtrl->getLinkTarget($this, "addNews"));
-		$ilToolbar->addButton("Add News (Lang Var)", $ilCtrl->getLinkTarget($this, "addNewsLangVar"));
+		$ilToolbar->addButton("Add News X", $ilCtrl->getLinkTarget($this, "addNewsLangVar"));
 		$ilToolbar->addButton("Delete One", $ilCtrl->getLinkTarget($this, "deleteOneNews"));
 		$ilToolbar->addButton("Update One", $ilCtrl->getLinkTarget($this, "updateOneNews"));
 
@@ -205,6 +209,10 @@ class ilObjHelloWorldRepositoryObjectGUI extends ilObjectPluginGUI
 		$i = new ilNonEditableValueGUI($this->plugin->txt("description"));
 		$i->setInfo($object->getDescription());
 		$form->addItem($i);
+
+        $i = new ilNonEditableValueGUI($this->plugin->txt("name"));
+        $i->setInfo($object->getName());
+        $form->addItem($i);
 
 		$i = new ilNonEditableValueGUI($this->plugin->txt("online_status"));
 		$i->setInfo($object->isOnline()?"Online":"Offline");
@@ -248,6 +256,7 @@ class ilObjHelloWorldRepositoryObjectGUI extends ilObjectPluginGUI
 		$object->setTitle($form->getInput('title'));
 		$object->setDescription($form->getInput('description'));
 		$object->setOnline($form->getInput('online'));
+        $object->setName($form->getInput('name'));
 	}
 
 	/**
